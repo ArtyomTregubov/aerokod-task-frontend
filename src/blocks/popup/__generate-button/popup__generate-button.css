@@ -1,0 +1,9 @@
+.popup__generate-button {
+    background-color: transparent;
+    border: 1px solid #bc3030;
+    border-radius: 5px;
+    color: #bc3030;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    margin: 10px 0;
+}
