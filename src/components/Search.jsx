@@ -18,7 +18,7 @@ const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
             type="text" 
             name="form-question" 
             className="search__form-input"
-            placeholder="Название сервиса" 
+            placeholder="Service name" 
             required 
             value={searchTerm} 
             onChange={(e) => setSearchTerm(e.target.value)} 
@@ -34,7 +34,12 @@ const Search = ({ searchTerm, setSearchTerm, onSearch }) => {
           className="search__add-button" 
           type="button" 
           onClick={onSearch} 
-          >Поиск</button>
+          >Search</button>
+
+        <img src="./images/search_icon.png" 
+             alt="иконка поиска" 
+             className="search__button-logo"/>
+
       </form>
 
     </section>

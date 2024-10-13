@@ -12,19 +12,19 @@ const App = () => {
     {
         id: uuidv4(), 
         name: "Яндекс.Облако",
-        password: "123ABC"
+        password: "RSHDOHQM^;x|"
     },
 
     {
         id: uuidv4(), 
         name: "Госуслуги",
-        password: "1012021"
+        password: "uW&65*?$ZuHN"
     },
 
     {
         id: uuidv4(), 
         name: "PornHub",
-        password: "123$ABC"
+        password: "M}:?5x@wa_J?"
     },
     
   ]);  
@@ -71,12 +71,17 @@ const App = () => {
     };
 
     const addPasswordCard = () => {
+        
+        if (!serviceName || !password) {
+            alert('Ошибка: все поля должны быть заполнены.');
+            return; 
+        }
+
         const newCard = { id: uuidv4(), name: serviceName, password: password }; 
         const updatedCards = [...passwordCards, newCard];
 
-        // Имитация отправки данных на сервер
         setTimeout(() => {
-            if (Math.random() < 0.5) { // 50% вероятность успешного ответа
+            if (Math.random() < 0.5) { 
                 setPasswordCards(updatedCards); 
                 setFilteredCards(updatedCards); 
                 localStorage.setItem('passwordCards', JSON.stringify(updatedCards)); 
@@ -84,23 +89,23 @@ const App = () => {
                 setPassword(''); 
                 setIsPopupOpen(false); 
             } else {
-                alert('Ошибка: не удалось добавить карточку пароля. Попробуйте еще раз.'); // Обработка ошибки
+                alert('Ошибка: не удалось добавить карточку пароля. Попробуйте еще раз.'); 
             }
-        }, 1000); // Задержка 1 секунда
+        }, 1000); 
     };
 
     const deletePasswordCard = (id) => {
-        // Имитация отправки данных на сервер для удаления
+        
         setTimeout(() => {
-            if (Math.random() < 0.5) { // 50% вероятность успешного ответа
+            if (Math.random() < 0.5) { 
                 const updatedCards = passwordCards.filter(card => card.id !== id); 
                 setPasswordCards(updatedCards); 
                 setFilteredCards(updatedCards); 
                 localStorage.setItem('passwordCards', JSON.stringify(updatedCards)); 
             } else {
-                alert('Ошибка: не удалось удалить карточку пароля. Попробуйте еще раз.'); // Обработка ошибки
+                alert('Ошибка: не удалось удалить карточку пароля. Попробуйте еще раз.'); 
             }
-        }, 1000); // Задержка 1 секунда
+        }, 1000); 
     };
 
     const handleSearch = () => {
@@ -113,6 +118,11 @@ const App = () => {
     useEffect(() => {
         loadPasswordCards();
     }, []);
+
+    
+    const handleSave = () => {
+        addPasswordCard();
+    };
 
     return (
         <div className="App">

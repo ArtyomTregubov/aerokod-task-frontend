@@ -23,6 +23,7 @@
 @import url(../src/blocks/passwords/__password/passwords__password.css);
 @import url(../src/blocks/passwords/__copy-button/passwords__copy-button.css);
 @import url(../src/blocks/passwords/__delete-button/passwords__delete-button.css);
+@import url(../src/blocks/passwords/__image/passwords__image.css);
 @import url(../src/blocks/popup/popup.css);
 @import url(../src/blocks/popup/_opened/popup_opened.css);
 @import url(../src/blocks/popup/__button-container/popup__button-container.css);

@@ -7,4 +7,13 @@
     margin: 20px 0 0;
     font-family: 'Montserrat';
     color: #fff;
+    cursor: pointer;
 }  
+
+.popup__save-button:hover {
+    opacity: 0.9;
+}
+
+.popup__save-button:active {
+    transform: scale(0.97);
+}

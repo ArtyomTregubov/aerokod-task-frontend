@@ -15,32 +15,42 @@ export default function Passwords({passwordCards, onDeleteCard}) {
   return (
     <section className="passwords">
 
-      <h2 className="passwords__title">Сохранённые пароли :</h2>
-      <div className="passwords__grid">
+      <div className="passwords__container">
+        <h2 className="passwords__title">Saved passwords :</h2>
+        <div className="passwords__grid">
 
-        {
-          passwordCards.map((card) => {
+          {
+            passwordCards.map((card) => {
 
-            return (
-              <article className="passwords__element" key={card.id}>
-                <span className="passwords__name">{card.name}</span>
-                <span className="passwords__password">{card.password}</span>
-                <div className="passwords__buttons">
-                  <button 
-                    className="passwords__copy-button" 
-                    onClick={() => handleCopyPassword(card.password)} 
-                  ></button>
-                  <button 
-                    className="passwords__delete-button" 
-                    onClick={() => onDeleteCard(card.id)} 
-                  ></button>
-                </div>
-              </article>
-            );
-            
-          })
-        }
-      </div>
+              return (
+                <article className="passwords__element" key={card.id}>
+                  <span className="passwords__name">{card.name}</span>
+                  <span className="passwords__password">{card.password}</span>
+                  <div className="passwords__buttons">
+
+                    <button 
+                      className="passwords__copy-button" 
+                      onClick={() => handleCopyPassword(card.password)} 
+                    ></button>
+
+                    <button 
+                      className="passwords__delete-button" 
+                      onClick={() => onDeleteCard(card.id)} 
+                    ></button>
+                    
+                  </div>
+                </article>
+              );
+              
+            })
+          }
+        </div>
+      </div> 
+
+      <img src="./images/password_image.png" 
+           alt="картинка пароля" 
+           className="passwords__image"/>
+
     </section>
   );
 }

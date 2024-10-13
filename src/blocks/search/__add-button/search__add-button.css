@@ -11,6 +11,10 @@
     cursor: pointer;
 }    
 
+.search__add-button:hover {
+    opacity: 0.9;
+}
+
 .search__add-button:active {
-    transform: scale(0.99);
+    transform: scale(0.97);
 }

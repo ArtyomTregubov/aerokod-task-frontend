@@ -7,7 +7,11 @@ export default function Header({ onAddPassword }) {
         <div className="header__container">
            <div className="header__logo-container">
             <span className="header__logo-text">Password manager for</span>
-            <img src="./images/aerokod_logo.png" alt="логотип aerокод" className="header__logo"></img>
+            
+            <img src="./images/aerokod_logo.png" 
+                 alt="логотип aerокод" 
+                 className="header__logo"/>
+                 
            </div> 
 
            <div className="header__button-container">

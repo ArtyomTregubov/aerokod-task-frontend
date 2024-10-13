@@ -30,7 +30,7 @@ const Popup = ({ isOpen,
                 <label>
                     <input
                         className='popup__input-name'
-                        placeholder="Название сервиса"
+                        placeholder="Service name"
                         type="text"
                         value={serviceName}
                         onChange={(e) => setServiceName(e.target.value)}
@@ -42,7 +42,7 @@ const Popup = ({ isOpen,
                 <label>
                     <input
                         className='popup__input-name'
-                        placeholder="Пароль"
+                        placeholder="Password"
                         type="text"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -51,12 +51,12 @@ const Popup = ({ isOpen,
                     />
                 </label>
 
-                <h2 className='popup__form-title'>Сгенерировать пароль?</h2>
+                <h2 className='popup__form-title'>Generate password?</h2>
 
                 <div className='popup__form-generator'>
 
                     <label className='popup__form-label'>
-                        Длина пароля 
+                        Password length 
                         <input
                             className='popup__input-number'
                             type="number"
@@ -68,7 +68,7 @@ const Popup = ({ isOpen,
                     </label>
 
                     <label className='popup__form-label'>
-                        Включать цифры 
+                        Include numbers 
                         <input
                             type="checkbox"
                             checked={includeNumbers}
@@ -77,7 +77,7 @@ const Popup = ({ isOpen,
                     </label>
 
                     <label className='popup__form-label'>
-                        Включать символы 
+                        Include symbols 
                         <input
                             type="checkbox"
                             checked={includeSymbols}
@@ -88,12 +88,12 @@ const Popup = ({ isOpen,
                     <button onClick={generatePassword}
                             className='popup__generate-button'
                             type='button'
-                            >Сгенерировать</button>
+                            >Generate</button>
                 </div>
 
                 <button className="popup__save-button" 
                         type="submit"
-                        >Сохранить</button>
+                        >Save</button>
             </form>
         </div>
     );
